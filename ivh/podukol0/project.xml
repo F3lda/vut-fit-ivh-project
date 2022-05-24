@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project outputprefix="ivh">
+
+    <!--  Project description -->
+    <name>IVH 2022 - podúkol 0 - LCD test</name>
+    <revision>20220522</revision>
+	<author>xjirgl01</author>
+    <authoremail>xjirgl01@vutbr.cz</authoremail>
+    <description>LCD display TEST</description>
+
+    <!--  MCU part -->
+    <mcu>
+        <file>main.c</file>
+    </mcu>
+
+    <!-- FPGA part -->
+    <fpga>
+		<include>fpga/ctrls/lcd/lcd_ctrl_high.xml</include>
+	
+        <file>top.vhd</file>
+        <file>rom_memory.vhd</file>
+        <file>rom_memory32.vhd</file>
+        <file>lcd_ctrl_high32.vhd</file>
+
+
+        <!-- soubory pro simulaci -->
+        <file context="sim">fpga/sim/tb.vhd</file>
+        <file context="sim">fpga/models/keyboard/keyboard.vhd</file>
+        <file context="sim">fpga/models/lcd/lcd.vhd</file>
+    </fpga>
+
+</project>

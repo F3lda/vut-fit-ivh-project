@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project outputprefix="ivh">
+
+    <!--  Project description -->
+    <name>IVH 2022 - podúkol 1</name>
+    <revision>20220522</revision>
+	<author>xjirgl01</author>
+    <authoremail>xjirgl01@vutbr.cz</authoremail>
+    <description>Funkce GETCOLUMN</description>
+
+    <!--  MCU part -->
+    <mcu>
+        <file>main.c</file>
+    </mcu>
+
+    <!-- FPGA part -->
+    <fpga>
+        <file>top.vhd</file>
+        <file>newspaper_pack.vhd</file>
+
+
+        <!-- soubory pro simulaci -->
+        <file context="sim">fpga/sim/newspaper_pack_tb.vhd</file>
+    </fpga>
+
+</project>

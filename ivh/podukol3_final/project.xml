@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project outputprefix="ivh">
+
+	<!--  Project description -->
+	<name>IVH 2022 - projekt</name>
+	<revision>20220427</revision>
+	<author>Karel Jirgl (F3lda)</author>
+	<authoremail>xjirgl01@vutbr.cz</authoremail>
+	<description>LED 8x16 display animations</description>
+
+	<!--  MCU part -->
+	<mcu>
+		<file>main.c</file>
+	</mcu>
+
+	<!-- FPGA part -->
+	<fpga architecture="gp" dcmfreq="20MHz" toplevelentity="fpga" ucffile="fpga/fpga_fitkit.ucf" library="work">
+		<file>top.vhd</file>
+		<file>rom_memory.vhd</file>
+		<file>column_ctrl.vhd</file>
+		<file>newspaper_pack.vhd</file>
+		<file>counter.vhd</file>
+		
+		<!-- soubory pro simulaci -->
+		<file context="sim">sim/tb.vhd</file>
+	</fpga>
+
+</project>

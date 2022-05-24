@@ -1,2 +1,2 @@
 # vut-fit-ivh-project
-VUT FIT IVH project
+VUT FIT IVH - FITkit project

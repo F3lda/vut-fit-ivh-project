@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project outputprefix="ivh">
+
+    <!--  Project description -->
+    <name>IVH 2022 - podúkol 3</name>
+    <revision>20220522</revision>
+	<author>xjirgl01</author>
+    <authoremail>xjirgl01@vutbr.cz</authoremail>
+    <description>LED 8x16 display test</description>
+
+    <!--  MCU part -->
+    <mcu>
+        <file>main.c</file>
+    </mcu>
+
+    <!-- FPGA part -->
+    <fpga toplevelentity="fpga" ucffile="fpga/fpga_fitkit.ucf" architecture="top"><!-- dcmfreq="20MHz" -->
+        <file>fpga.vhd</file>
+        <file>fpga_inst.vhd</file>
+        <!--<file>clkgen.vhd</file>
+        <file>clkgen_config.vhd</file>-->
+        <file>tlv_gp_ifc.vhd</file>
+		
+        <file>rom_memory.vhd</file>
+        <file>column_ctrl.vhd</file>
+        <file>newspaper_pack.vhd</file>
+		
+		<!-- soubory pro simulaci -->
+        <file context="sim">fpga/sim/tb.vhd</file>
+    </fpga>
+
+</project>
